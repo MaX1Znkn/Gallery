@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+nav{
+	display: grid;
+	grid-template-rows: 20% 10% 60% 10%;
+	background: #00A8C6;
+	position: fixed;
+	width: 22%;
+	height: 100%;
+	box-shadow: inset -5px 0px 5px 0px #333;
+}
+.avatar{
+	display: grid;
+	grid-template-areas:
+	"img div1"
+	"img div2";
+	text-align: center;
+	color: white;
+}
+.avatar a{
+	grid-area: img;
+	align-self: center;
+	justify-self: center;
+}
+.div1{
+	grid-area: div1;
+	align-self: end;
+	font-family: "Comic Sans MS";
+}
+.div2{
+	grid-area: div2;
+	font-family: "century gothic";
+}
+.avatar img{
+	height: 14vh; 
+	width: 14vh;
+	border-radius: 50%;
+}
+nav .link{
+	text-decoration: none;
+	color: lightgray;
+	transition: color 0.3s;
+	font-family: "Comic Sans MS";
+}
+nav .link:hover{
+	color: white;
+}
+nav .menu{
+	text-align: right;
+	padding-right: 5%;
+	font-size: 30px;
+	background: #00A8C6;
+	transition: background 0.5s;
+	box-shadow: inset -5px 2px 5px 0px #333;
+}
+nav .menu1{
+
+}
+nav .menu:hover{
+	background: #007e94;
+}
+.icons{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-content: center;
+}
+.icons a{
+	opacity: .3;
+	transition: opacity 0.3s;
+	justify-self: center;
+}
+.icons a:hover{
+	opacity: 1;
+}
+.icons img{
+	width: 4vh;
+	height: 4vh;
+}
+
+
+
+.scroll{
+	box-shadow: inset -5px 2px 5px 0px #333;
+	overflow: auto;
+	font-family: "Comic Sans MS";
+	font-size: 22px;
+	width: 100%;
+}
+form{
+	margin-left: 4%;
+	line-height: 1.8;
+
+}
+
+
+
+header{
+	width: 78%;
+	float: right;
+}
+header .sha1{
+	width: 100%;
+}
+
+
+
+article{
+	width: 78%;
+	float: right;
+	margin-bottom: 5%;
+}
+article h2{
+	text-align: center;
+	color: deepskyblue;
+	font-size: 50px;
+	font-family: "Comic Sans MS";	
+	margin: 2%;
+}
+
+.galgrid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.galgrid > div{
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	text-align: center;
+}
+.galgrid > div > img{
+	margin: 5% auto;
+	width: 75%;
+	border-radius: 20px;
+	transition: transform .5s, box-shadow .5s;
+}
+.galgrid > div > img:hover{
+	transform: scale(1.5);
+	box-shadow: 0px 0px 20px 5px grey;
+}
+.galdiv{
+	font-size: 22px;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: "Comic Sans MS";
+}
+.divlink{
+	text-align: center;
+	margin-top: 1%;
+}
+.link1{
+	font-size: 22px;
+	text-decoration: none;
+	font-family: "Comic Sans MS";
+	color: deepskyblue;
+	opacity: .5;
+	transition: opacity 0.3s;
+}
+.link1:hover{
+	opacity: 1;
+}
