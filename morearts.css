@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+
 }
 nav{
 	display: grid;
@@ -88,11 +89,34 @@ nav .menu:hover{
 	font-size: 22px;
 	width: 100%;
 }
+/*Скроллбар*/
+.scroll::-webkit-scrollbar {
+    width: 5%;
+}
+/*Трек*/
+.scroll::-webkit-scrollbar-track {
+    background: #00A8C6; 
+    box-shadow: inset -5px 2px 5px 0px #333;
+}
+/*Ползунок*/
+.scroll::-webkit-scrollbar-thumb {
+    background: #afeeee; 
+    box-shadow: inset -5px 2px 5px 0px #333;
+}
+/*Ползунок при наведении*/
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 form{
 	margin-left: 4%;
 	line-height: 1.8;
-
 }
+
+
+
+
+
 
 
 
@@ -135,7 +159,7 @@ article h2{
 	transition: transform .5s, box-shadow .5s;
 }
 .galgrid > div > img:hover{
-	transform: scale(1.5);
+	transform: matrix(1.5, 0, 0, 1.5, -5, 0);
 	box-shadow: 0px 0px 20px 5px grey;
 }
 .galdiv{
@@ -158,4 +182,86 @@ article h2{
 }
 .link1:hover{
 	opacity: 1;
+}
+
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #003494;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+@media (min-width: 1920px){
+	nav .menu
+	{
+		font-size: 44px;
+	}
+	article h2
+	{
+		font-size: 70px;
+	}
+	.div1
+	{
+		font-size: 34px;
+	}
+	.div2
+	{
+		font-size: 20px;
+	}
+	.galdiv
+	{
+		font-size: 34px;
+	}
+	label
+	{
+		font-size: 26px;
+	}
 }
